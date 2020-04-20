@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                background-color:cornsilk;
+            }
+            header {
+                width:max-content;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin: 50px 20px 20px 50px;
+            }
+            h1 {
+                font-size: 2.5rem;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                color:#313131;
+                width:max-content;
+            }
+            section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h2 {
+                font-weight:bold;
+            }
+            img {
+                width: 75%;
+            }
+            section {
+                margin: 2rem 2rem 2rem 2rem;
+            }
+            .year {
+                font-weight: bold;
+            }
+            #subhead{
+                font-size: 1rem;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #img-caption{
+                margin-top: -1rem;
+                width: 75%;
+                opacity: 0.7;
+                font-size: 0.8rem;
+            }
+            #tribute-info {
+                width: 50%;
+                line-height: 2rem;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            #judgement {
+                width: 50%;
+                border-radius: 5%;
+                border-width: 2px;
+                border-style: dashed;
+                border-color: grey;
+                padding: 50px 25px 50px 25px;
+                line-height: 2rem;
+                margin: 50px 25px 50px 25px;
+            }
+            #via {
+                font-style: italic;
+                align-self: flex-end;
+            }
+            #link{
+                font-weight: bold;
+                font-size: 1rem;
+                display: inline;
+            }
+
+        </style>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <header>
+                <h1 id="title">Dr. Norman Borlaug</h1>
+                <div id="subhead">
+                    The man who saved a billion lives
+                </div>
+            </header>
+            <div id="img-div">
+                <img src="img/img.jpg">
+                <br>
+                <div id="img-caption">
+                    Dr. Norman Borlaug, third from the left, 
+                    trains biologists in Mexico on how to increase wheat yields - 
+                    part of his life-long war on hunger.
+                </div>
+            </div>
+            <section>
+                <h2>
+                    Here's a time line of Dr. Borlaug's life:
+                </h2>
+                <div id="tribute-info">
+                    <ul>
+                        <li><span class="year">1914</span> - Born in Cresco, Iowa</li>
+                        <li><span class="year">1933</span> - Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration"</li>
+                        <li><span class="year">1935</span> - Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."</li>
+                    </ul>
+                </div>
+                <div id="judgement">
+                    <p>"Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."</p>
+                    <p id="via">-- Indian Prime Minister Manmohan Singh</p>
+                </div>
+                <div id="link">
+                    If you have time, you should read more about this incredible human being on his <a id="tribute-link" href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank">Wikipedia entry</a>.
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
