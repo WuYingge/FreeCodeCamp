@@ -3,14 +3,88 @@
     <head>
         <style>
             body {
-                /* background-image:url("img/painkiller.jpg"); */
-                background-color: rgba(100,255,255,0.3);
+                background-image:url("img/background.jpg");
             }
 
             main {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: rgba(255,255,255,0.6);
             }
+            h1 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 3em;
+                color: rgba(20,60,20,0.9);
+            }
+            form {
+                background-color: rgba(50,100,100,0.8);
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 60%;
+                min-width: 500px;
+            }
+            input, select {
+                border-radius: 4px;
+                line-height: 1.2rem;
+                font-size: 1.2rem;
+                padding: 3px 3px;
+            }
+            button {
+                border-radius: 4px;
+                height: 2rem;
+                background-color: rgba(230,230,10,0.6);
+                border-width: 2px;
+                border-color:  rgba(230,230,10,0.6);
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: white;
+            }
+            textarea {
+                height: 5rem;
+                border-radius: 4px;
+                font-size: 1.2rem;
+                padding: 3px 3px;
+            }
+            option {
+                font-size: 1rem;
+                text-transform: capitalize;
+            }
+            .one-input {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin-top: 0.7rem;
+                margin-bottom: 0.7rem;
+                width: 95%;
+                line-height: 2rem;
+            }
+            .label {
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+            #checkbox {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-top: -0.7rem;
+            }
+            #description {
+                font-size: 1.2rem;
+                font-style: italic;
+                font-weight: bold;
+            }
+            input[type="checkbox"], input[type="radio"] {
+                transform: scale(1.5);
+                margin-right: 8px;
+            }
+
         </style>
 
     </head>
@@ -22,33 +96,30 @@
             <p id="description">Thank you for taking the time to help us improve the platform</p>
             <form action="" id="survey-form">
                 <div class="one-input">
-                    <label for="name" class="label">Name
-                        <input id="name" type="text" name="name" placeholder="Enter Your Name" required>
-                    </label>
+                    <label for="name" class="label">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Enter Your Name" required>
                 </div>
                 <div class="one-input">
-                    <label class="label" for="email">email
-                        <input  id="email" type="email" name="email" placeholder="Enter Your Email" required>
-                    </label>
+                    <label class="label" for="email">email</label>
+                    <input  id="email" type="email" name="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="one-input">
-                    <label for="age" class="label">age<span class="input-hint">(optional)</span>
-                        <input id="age" type="number" name="age" value="Age" max="100" min="6">
-                    </label>
+                    <label for="age" class="label">age<span class="input-hint">(optional)</span></label>
+                    <input id="age" type="number" name="age" value="Age" max="100" min="6">
                 </div>
                 <div class="one-input">
-                    <p>Which option best describe your current role?</p>
+                    <label class="label" for="dropdown">Which option best describe your current role?</label>
                     <select id="dropdown" name="row">
-                        <option selected disabled>Select your current role</option>
-                        <option class="one-input" value="student">Student</option>
-                        <option class="one-input" value="full-time-job">Full time job</option>
-                        <option class="one-input" value="full-time-learner">full time learner</option>
-                        <option class="one-input" value="prefer-not-to-say">prefer not to say</option>
-                        <option class="one-input" value="other">Other</option>
+                        <option  selected disabled>Select your current role</option>
+                        <option value="student">Student</option>
+                        <option value="full-time-job">Full time job</option>
+                        <option value="full-time-learner">full time learner</option>
+                        <option value="prefer-not-to-say">prefer not to say</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
                 <div class="one-input">
-                    <p>Would you recommend FreeCodeCamp to your friends?</p>
+                    <label class="label">Would you recommend FreeCodeCamp to your friends?</label>
                     <label class="label" for="sure">
                         <input id="sure" value="sure" name="recommend" type="radio">sure
                     </label>
@@ -60,7 +131,7 @@
                     </label>
                 </div>
                 <div class="one-input">
-                    <p>What is your favourite feature of FreeCodeCamp?</p>
+                    <label class="label" for="dropdown2">What is your favourite feature of FreeCodeCamp?</label>
                     <select id="dropdown2" name="favourite">
                         <option disabled selected>Select an option</option>
                         <option value="projects">projects</option>
@@ -70,7 +141,7 @@
                     </select>
                 </div>
                 <div class="one-input">
-                    <p>What would you like to see improved<span class="input-hint">(Check all that apply)</span></p>
+                    <p class="label">What would you like to see improved<span class="input-hint">(Check all that apply)</span></p>
                     <div id="checkbox">
                         <label class="label" for="front-end-project">
                             <input id="front-end-project" value="front-end-project" name="to-improve" type="checkbox">front end projects
@@ -93,12 +164,14 @@
                     </div>
                 </div>
                 <div class="one-input">
-                    <p>Any comments or suggestion?</p>
-                    <input type="text" placeholder="Enter your comment here">
+                    <label class="label" for="comment">Any comments or suggestion?</label>
+                    <textarea id="comment" type="text" placeholder="Enter your comment here" name="comment"></textarea>
                 </div>
-                <button type="submit">
-                    Submit
-                </button>
+                <div class="one-input">
+                    <button type="submit">
+                        Submit
+                    </button>
+                </div>
             </form>
         </main>
     </body>
