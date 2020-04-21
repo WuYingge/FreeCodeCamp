@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <main>
+            <h1 id="title">
+                freeCodeCamp Survey Form
+            </h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+            <form action="" id="survey-form">
+                <div class="one-input">
+                    <label for="name" class="label">Name
+                        <input id="name" type="text" name="name" value="Enter Your Name" required>
+                    </label>
+                </div>
+                <div class="one-input">
+                    <label class="label" for="email">email
+                        <input  id="email" type="email" name="email" value="Enter Your Email" required>
+                    </label>
+                </div>
+                <div class="one-input">
+                    <label for="age" class="label">age
+                        <input id="age" type="number" name="age" value="Age">
+                    </label>
+                </div>
+                <div class="one-input">
+                    <p>Which option best describe your current role?</p>
+                    <select id="dropdown" name="row">
+                        <option class="one-input" value="student">Student</option>
+                        <option class="one-input" value="full-time-job">Full time job</option>
+                        <option class="one-input" value="full-time-learner">full time learner</option>
+                        <option class="one-input" value="prefer-not-to-say">prefer not to say</option>
+                        <option class="one-input" value="other">Other</option>
+                    </select>
+                </div>
+                <div class="one-input">
+                    <p>Would you recommend FreeCodeCamp to your friends?</p>
+                    <label class="label" for="sure">
+                        <input id="sure" value="sure" name="recommend" type="radio">sure
+                    </label>
+                    <label class="label" for="maybe">
+                        <input id="maybe" value="maybe" name="recommend" type="radio">maybe
+                    </label>
+                    <label class="label" for="not-sure">
+                        <input id="not-sure" value="not-sure" name="recommend" type="radio">not sure
+                    </label>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
