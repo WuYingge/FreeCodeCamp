@@ -86,7 +86,7 @@
             }
 
         </style>
-
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </head>
     <body>
         <main>
@@ -96,20 +96,20 @@
             <p id="description">Thank you for taking the time to help us improve the platform</p>
             <form action="" id="survey-form">
                 <div class="one-input">
-                    <label for="name" class="label">Name</label>
+                    <label id="name-label" for="name" class="label">Name</label>
                     <input id="name" type="text" name="name" placeholder="Enter Your Name" required>
                 </div>
                 <div class="one-input">
-                    <label class="label" for="email">email</label>
+                    <label id="email-label" class="label" for="email">email</label>
                     <input  id="email" type="email" name="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="one-input">
-                    <label for="age" class="label">age<span class="input-hint">(optional)</span></label>
-                    <input id="age" type="number" name="age" value="Age" max="100" min="6">
+                    <label id="number-label" for="number" class="label">age<span class="input-hint">(optional)</span></label>
+                    <input id="number" type="number" name="age" value="Age" max="100" min="6" placeholder="Your Age">
                 </div>
                 <div class="one-input">
                     <label class="label" for="dropdown">Which option best describe your current role?</label>
-                    <select id="dropdown" name="row">
+                    <select id="dropdown" name="role">
                         <option  selected disabled>Select your current role</option>
                         <option value="student">Student</option>
                         <option value="full-time-job">Full time job</option>
@@ -168,7 +168,7 @@
                     <textarea id="comment" type="text" placeholder="Enter your comment here" name="comment"></textarea>
                 </div>
                 <div class="one-input">
-                    <button type="submit">
+                    <button id="submit" type="submit">
                         Submit
                     </button>
                 </div>
