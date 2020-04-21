@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body {
+                /* background-image:url("img/painkiller.jpg"); */
+                background-color: rgba(100,255,255,0.3);
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
 
     </head>
     <body>
@@ -12,22 +23,23 @@
             <form action="" id="survey-form">
                 <div class="one-input">
                     <label for="name" class="label">Name
-                        <input id="name" type="text" name="name" value="Enter Your Name" required>
+                        <input id="name" type="text" name="name" placeholder="Enter Your Name" required>
                     </label>
                 </div>
                 <div class="one-input">
                     <label class="label" for="email">email
-                        <input  id="email" type="email" name="email" value="Enter Your Email" required>
+                        <input  id="email" type="email" name="email" placeholder="Enter Your Email" required>
                     </label>
                 </div>
                 <div class="one-input">
-                    <label for="age" class="label">age
-                        <input id="age" type="number" name="age" value="Age">
+                    <label for="age" class="label">age<span class="input-hint">(optional)</span>
+                        <input id="age" type="number" name="age" value="Age" max="100" min="6">
                     </label>
                 </div>
                 <div class="one-input">
                     <p>Which option best describe your current role?</p>
                     <select id="dropdown" name="row">
+                        <option selected disabled>Select your current role</option>
                         <option class="one-input" value="student">Student</option>
                         <option class="one-input" value="full-time-job">Full time job</option>
                         <option class="one-input" value="full-time-learner">full time learner</option>
@@ -47,6 +59,46 @@
                         <input id="not-sure" value="not-sure" name="recommend" type="radio">not sure
                     </label>
                 </div>
+                <div class="one-input">
+                    <p>What is your favourite feature of FreeCodeCamp?</p>
+                    <select id="dropdown2" name="favourite">
+                        <option disabled selected>Select an option</option>
+                        <option value="projects">projects</option>
+                        <option value="challenges">challenges</option>
+                        <option value="forum">forum</option>
+                        <option value="opensource">open source</option>
+                    </select>
+                </div>
+                <div class="one-input">
+                    <p>What would you like to see improved<span class="input-hint">(Check all that apply)</span></p>
+                    <div id="checkbox">
+                        <label class="label" for="front-end-project">
+                            <input id="front-end-project" value="front-end-project" name="to-improve" type="checkbox">front end projects
+                        </label>
+                        <label class="label" for="back-end-project">
+                            <input id="back-end-project" value="back-end-project" name="to-improve" type="checkbox">back end projects
+                        </label>
+                        <label class="label" for="data-visualization">
+                            <input id="data-visualization" value="data-visualization" name="to-improve" type="checkbox">data visualization
+                        </label>
+                        <label class="label" for="challenges">
+                            <input id="challenges" value="challenges" name="to-improve" type="checkbox">challenges
+                        </label>
+                        <label class="label" for="open-source-community">
+                            <input id="open-source-community" value="open-source-community" name="to-improve" type="checkbox">open source community
+                        </label>
+                        <label class="label" for="forum">
+                            <input id="forum" value="forum" name="to-improve" type="checkbox">forum
+                        </label>
+                    </div>
+                </div>
+                <div class="one-input">
+                    <p>Any comments or suggestion?</p>
+                    <input type="text" placeholder="Enter your comment here">
+                </div>
+                <button type="submit">
+                    Submit
+                </button>
             </form>
         </main>
     </body>
