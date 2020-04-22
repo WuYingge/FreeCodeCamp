@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <header>
+            <h2>Cute Cat Adoption</h2>
+            <p><img src="img/icon.jpg"></p>
+            <nav>
+                <a href="#cat-pics">Cats</a>
+                <a href="#cat-video">Life with cats</a>
+                <a href="#notation">Matters need attention for Adoption</a>
+            </nav>
+        </header>
+        <main>
+            <section id="cat-pics">
+                <h3>Cats Pictures</h3>
+                <figure>
+                    <img src="img/adorable-animal-animal-world-cat.jpg">
+                    <figcaption>Adorable animal-Cat</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/animal-pet-cute-kitten.jpg">
+                    <figcaption>Cute Kitten</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/grey-and-white-short-fur-cat.jpg">
+                    <figcamption>Grey and white short fur cat</figcamption>
+                </figure>
+            </section>
+            <section id="cat-video">
+                <video controls>
+                    <source src="img/cat-video.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section id="notation">
+                <ol></ol>
+            </section>
+        </main>
+        <section id="contact-us">
+            <form action="submit">
+                <p class="form-description">Leave your preference and contact info to keep an eye on your suitable cats.</p>
+                <div class="one-input">
+                    <label for="male-choice">
+                        <input id="male-choice" name="gender" type="radio">
+                        Male
+                    </label>
+                    <label for="female-choice">
+                        <input id="female-choice" name="gender" type="radio">
+                        Female
+                    </label>
+                </div>
+                <div clss="one-input">
+                    <p class="form-description">Cats Age</p>
+                    <select id="cat-age" name="cat-age">
+                        <option value="baby">baby</option>
+                        <option value="young">young</option>
+                        <option value="adult">adult</option>
+                    </select>
+                </div>
+                <div class="one-input">
+                    <label for="location">Your location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your location">
+                </div>
+                <div class="one-input">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="one-input">
+                    <label for="email">Your E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your E-mail">
+                </div>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </section>
+        <footer>
+            <p>Privacy</p>
+            <p>Contact Us</p>
+            <p>Terms</p>
+            <p>Copyright 2020, Cute Cat Adoption</p>
+        </footer>
+    </body>
+</html>
