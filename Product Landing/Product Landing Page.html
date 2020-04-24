@@ -1,99 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            header {
-                position: fixed;
-                top: 0%;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                height: 50px;
-                width: 100%;
-                margin-bottom: 100px;
-                background-color: rgba(100,222,222,0.8);
-                z-index: 1;
-            }
-            main {
-                width: 75%;
-                position: relative;
-                top: 50px;
-                margin-bottom: 50px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            img {
-                width: 100%;
-            }
-            video {
-                width: 100%;
-            }
-            footer {
-                position: relative;
-                margin-top: 50px;
-            }
-            a {
-                padding: 8px 30px 8px 30px;
-            }
-            p {
-                margin: 0px 0px 0px 0px;
-            }
-            figure {
-                border: 5px dotted grey;
-                border-radius: 15px;
-                padding: 15px;
-                width: 33%;
-            }
-            form {
-                background-color: lightgoldenrodyellow;
-                padding: 20px 20px 20px 20px;
-                border: 5px dashed orange;
-                border-radius: 15px;
-            }
-            
-            .nav-link {
-                text-transform: capitalize;
-            }
-            .form-description {
-                border-bottom: 5px dashed orange;
-            }
-            #header-img {
-                width: auto;
-                height: 100%;
-                justify-self: flex-start;
-                margin-right: 25px;
-            }
-            #contact-us {
-                width: 20%;
-                position: fixed;
-                top: 10%;
-                left: 75%;
-            }
-            #links {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-            }
-            #copyright {
-                position: absolute;
-                right: 0;
-                padding: 8px 30px 8px 30px;
-            }
-            #figs {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: flex-start;
-            }
-            #header-img {
-                position: absolute;
-                left: 0px;
-            }
-            
-        </style>
+        <link href="Product Landing Page.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -174,6 +82,7 @@
             <form action="submit">
                 <p class="form-description">Leave your preference and contact info to keep an eye on your suitable cats.</p>
                 <div class="one-input">
+                    <p>Cat Gender</p>
                     <label for="male-choice">
                         <input id="male-choice" name="gender" type="radio">
                         Male
@@ -184,7 +93,7 @@
                     </label>
                 </div>
                 <div clss="one-input">
-                    <p class="form-description">Cats Age</p>
+                    <p>Cats Age</p>
                     <select id="cat-age" name="cat-age">
                         <option value="baby">baby</option>
                         <option value="young">young</option>
