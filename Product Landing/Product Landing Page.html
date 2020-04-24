@@ -13,6 +13,7 @@
             </nav>
         </header>
         <main>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
             <h2>Cute Cat Adoption</h2>
             <section id="cat-pics">
                 <h3>Cats Pictures</h3>
@@ -56,7 +57,7 @@
                 </div>
             </section>
             <section id="cat-video">
-                <video controls>
+                <video id="video" controls>
                     <source src="img/cat-video.mp4" type="video/mp4">
                 </video>
             </section>
@@ -79,7 +80,7 @@
             </section>
         </main>
         <section id="contact-us">
-            <form action="submit">
+            <form action="https://www.freecodecamp.com/email-submit" id="form" target="_blank">
                 <p class="form-description">Leave your preference and contact info to keep an eye on your suitable cats.</p>
                 <div class="one-input">
                     <p>Cat Gender</p>
@@ -92,9 +93,10 @@
                         Female
                     </label>
                 </div>
-                <div clss="one-input">
+                <div class="one-input">
                     <p>Cats Age</p>
                     <select id="cat-age" name="cat-age">
+                        <option value="" selected disabled>Select age</option>
                         <option value="baby">baby</option>
                         <option value="young">young</option>
                         <option value="adult">adult</option>
@@ -110,11 +112,11 @@
                 </div>
                 <div class="one-input">
                     <label for="email">Your E-mail</label>
-                    <input id="email" name="email" type="email" placeholder="Enter your E-mail">
+                    <input id="email" name="email" type="email" placeholder="Enter your E-mail" required>
                 </div>
-                <button type="submit">
-                    Submit
-                </button>
+                <div class="one-input">
+                    <input id="submit" type="submit">submit
+                </div>
             </form>
         </section>
         <footer>
@@ -123,7 +125,7 @@
                 <p><a href="">Contact Us</a></p>
                 <p><a href="">Terms</a></p>
             </div>
-            <p id="copyright">Copyright 2020, Cute Cat Adoption</p>
+            <div id="copyright">Copyright 2020, Cute Cat Adoption</div>
         </footer>
     </body>
 </html>
