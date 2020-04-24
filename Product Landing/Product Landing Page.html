@@ -1,33 +1,151 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <style>
+            header {
+                position: fixed;
+                top: 0%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                height: 50px;
+                width: 100%;
+                margin-bottom: 100px;
+                background-color: rgba(100,222,222,0.8);
+                z-index: 1;
+            }
+            main {
+                width: 75%;
+                position: relative;
+                top: 50px;
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            img {
+                width: 100%;
+            }
+            video {
+                width: 100%;
+            }
+            footer {
+                position: relative;
+                margin-top: 50px;
+            }
+            a {
+                padding: 8px 30px 8px 30px;
+            }
+            p {
+                margin: 0px 0px 0px 0px;
+            }
+            figure {
+                border: 5px dotted grey;
+                border-radius: 15px;
+                padding: 15px;
+                width: 33%;
+            }
+            form {
+                background-color: lightgoldenrodyellow;
+                padding: 20px 20px 20px 20px;
+                border: 5px dashed orange;
+                border-radius: 15px;
+            }
+            
+            .nav-link {
+                text-transform: capitalize;
+            }
+            .form-description {
+                border-bottom: 5px dashed orange;
+            }
+            #header-img {
+                width: auto;
+                height: 100%;
+                justify-self: flex-start;
+                margin-right: 25px;
+            }
+            #contact-us {
+                width: 20%;
+                position: fixed;
+                top: 10%;
+                left: 75%;
+            }
+            #links {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            #copyright {
+                position: absolute;
+                right: 0;
+                padding: 8px 30px 8px 30px;
+            }
+            #figs {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            #header-img {
+                position: absolute;
+                left: 0px;
+            }
+            
+        </style>
     </head>
     <body>
         <header>
-            <h2>Cute Cat Adoption</h2>
-            <p><img src="img/icon.jpg"></p>
+            <img id="header-img" src="img/icon.jpg">
             <nav>
-                <a href="#cat-pics">Cats</a>
-                <a href="#cat-video">Life with cats</a>
-                <a href="#notation">Matters need attention for Adoption</a>
+                <a class="nav-link" href="#cat-pics">Cats</a>
+                <a class="nav-link" href="#cat-video">Life with cats</a>
+                <a class="nav-link" href="#notation">Matters need attention for Adoption</a>
             </nav>
         </header>
         <main>
+            <h2>Cute Cat Adoption</h2>
             <section id="cat-pics">
                 <h3>Cats Pictures</h3>
-                <figure>
-                    <img src="img/adorable-animal-animal-world-cat.jpg">
-                    <figcaption>Adorable animal-Cat</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/animal-pet-cute-kitten.jpg">
-                    <figcaption>Cute Kitten</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/grey-and-white-short-fur-cat.jpg">
-                    <figcamption>Grey and white short fur cat</figcamption>
-                </figure>
+                <div id="figs">
+                    <figure>
+                        <img src="img/adorable-animal-animal-world-cat.jpg">
+                        <figcaption>Adorable animal-Cat</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/animal-pet-cute-kitten.jpg">
+                        <figcaption>Cute Kitten</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/grey-and-white-short-fur-cat.jpg">
+                        <figcaption>Grey and white short fur cat</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/close-up-photo-of-white-cat.jpg">
+                        <figcaption>Close up photo of white cat</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/eyes-cat-coach-sofa.jpg">
+                        <figcaption>Eyes cat coach sofa</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/grey-fur-kitten-gives-five.jpg">
+                        <figcaption>Grey fur kitten gives five</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/orange-tabby-cat-near-window.jpg">
+                        <figcaption>Orange tabby cat near window</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/photo-of-grey-tabby-kitten-lying-down.jpg">
+                        <figcaption>Photo of grey tabby kitten lying down</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/silver-tabby-cat-lying-on-brown-wooden-surface.jpg">
+                        <figcaption>Siver tabby cat lying on brown wooden surface</figcaption>
+                    </figure>
+                </div>
             </section>
             <section id="cat-video">
                 <video controls>
@@ -35,7 +153,21 @@
                 </video>
             </section>
             <section id="notation">
-                <ol></ol>
+                <p>Things You Might Want to Know About Cat Adoption</p>
+                <ol>
+                    <li>
+                        <p>Tips for Day One with Your New Cat / Kitten</p>
+                        There's lots you can do within in the first day to ease your new kitten / cat adoption into your home. When you arrive, select a quiet, closed-in area such as your bedroom or a small room away from the main foot traffic, and set it up with a litter box, bed, food and water. If you are adopting an adult cat, be sure that this "starter room" has locked screens, or keep the windows completely closed. If feasible, make the starter room the permanent location of the litter box. If you plan on having the permanent location of the litter box be elsewhere, you'll need two litter boxes. Please do consider the advantages of keeping your new cat indoors always — outdoor cats are exposed to disease, cat fights, being killed by dogs and other wild animals, and hit by cars. If you have other pets, don't introduce the new pet immediately. Let your new cat get to know and trust household members, before it must adjust to the entire home. For more on each of these tips visit our blog.
+                    </li>
+                    <li>
+                        <p>Introducing Cats & Kittens</p>
+                        Based on their age and personalities, you may take days or months to fully integrate your new cat adoption or kitten to your family pets. Generally it's believed the easiest introduction is when the new cat is younger, smaller, and of the opposite sex, but it really depends on the personalities and experiences of the felines involved. First always make sure each cat is healthy so that it does not transmit a disease. Neutering/spaying of all cats to be introduced is essential, ideally 2-4 weeks before the introduction, so the hormones levels have time to subside. The first step is to confine the new cat to one room with its litter box, food, water, and a bed. Feed your current cat(s) and the newcomer on either side of the door to this room. After the 7-10 day isolation period is done, and your new cat is healthy, you can progress to the next steps. For each step please read this post
+                    </li>
+                    <li>
+                        <p>The Myths of Cat Adoption</p>
+                        Did you know that most cats do not have a home due to no fault of their own? It is a common myth to think that all cats up for adoption in shelters and rescues are damaged in some way. But, nothing could be less true! Cat shelters and rescues are full of lovable, active and healthy adoptable cats just waiting for someone to take them home. A majority of cats are given up when their prior owner no longer afford the financial requirements to keep them, got divorced, had a death in the family or other unexpected change in their family situation, or didn't realize how much time & attention a cat adoption deserves and needs. Even worse, the number of cat adoptions in need are compounded by a surplus of cats bred for profit: millions of adoptable pets are killed each year due to overpopulation. By taking home a cat adoption from a rescue or a shelter, not only are you saving that pet, you're either making room in the rescue so they can save another pet from a shelter, or making room at the shelter itself. As you can see, cat adoption is truly a continuous cycle of saving lives, and it's the humane thing to do! Thank you for considering cat adoption, and please help us debunk the myth of homeless pets in the future.
+                    </li>
+                </ol>
             </section>
         </main>
         <section id="contact-us">
@@ -77,10 +209,12 @@
             </form>
         </section>
         <footer>
-            <p>Privacy</p>
-            <p>Contact Us</p>
-            <p>Terms</p>
-            <p>Copyright 2020, Cute Cat Adoption</p>
+            <div id="links">
+                <p><a href="">Privacy</a></p>
+                <p><a href="">Contact Us</a></p>
+                <p><a href="">Terms</a></p>
+            </div>
+            <p id="copyright">Copyright 2020, Cute Cat Adoption</p>
         </footer>
     </body>
 </html>
