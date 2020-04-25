@@ -48,7 +48,6 @@ figure {
     border-radius: 15px;
     padding: 15px;
     width: 33%;
-    /* background-color: rgba(255; */
 }
 figcaption {
     padding: 16px 0px 0px 0px;
@@ -148,13 +147,24 @@ li {
     font-size: 1.2rem;
     font-weight: bold;
 }
-@media (max-width < 700px) {
+@media (max-width : 800px) {
     #figs {
         display: flexbox;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
     }
+    figure {
+        display: flexbox;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 85%;
+    }
+    figure > img {
+        width: 60%;
+    }
+
 }
 html {
     scroll-padding-top: 55px;

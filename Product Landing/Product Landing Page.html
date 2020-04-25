@@ -1,12 +1,186 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="Product Landing Page.css" type="text/css" rel="stylesheet">
+        <!-- <link href="Product Landing Page.css" type="text/css" rel="stylesheet"> -->
+        <style>
+            body {
+                    font-family: 微软雅黑;
+                    background-color: rgba(200,200,200,0.6)
+                }
+                header {
+                    position: fixed;
+                    top: 0%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 50px;
+                    width: 100%;
+                    margin-bottom: 5rem;
+                    background-color: rgba(50,180,180,0.8);
+                    z-index: 1;
+                    border-bottom: 5px solid orange;
+                }
+                main {
+                    width: 75%;
+                    position: relative;
+                    top: 50px;
+                    margin-bottom: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                img {
+                    width: 100%;
+                }
+                video {
+                    width: 100%;
+                }
+                footer {
+                    position: relative;
+                    margin-top: 50px;
+                    width: 75%;
+                    background-color: rgba(50,180,180,0.8);
+                }
+                a {
+                    padding: 8px 30px 8px 30px;
+                }
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+                figure {
+                    border: 5px dotted orange;
+                    border-radius: 15px;
+                    padding: 15px;
+                    width: 33%;
+                }
+                figcaption {
+                    padding: 16px 0px 0px 0px;
+                    text-transform: capitalize;
+                }
+                select {
+                    width: 100%;
+                    padding: 3px;
+                    font-size: 1rem;
+                }
+                form {
+                    background-color: lightgoldenrodyellow;
+                    padding: 15px 15px 15px 15px;
+                    border: 5px dashed orange;
+                    border-radius: 15px;
+                    margin-top: 2.5rem;
+                    margin-left: 25px;
+                }
+                section {
+                    margin-top: 32px;
+                }
+                label, .one-input > p {
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+                option {
+                    text-transform: capitalize;
+                }
+                .nav-link {
+                    text-transform: capitalize;
+                }
+                .form-description {
+                    border-bottom: 5px dashed orange;
+                    padding-bottom: 20px;
+                }
+                #header-img {
+                    width: auto;
+                    height: 100%;
+                    justify-self: flex-start;
+                    margin-right: 25px;
+                }
+                #contact-us {
+                    width: 20%;
+                    position: fixed;
+                    top: 0%;
+                    left: 75%;
+                    min-width: 150px;
+                }
+                #links {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    font-weight: bold;
+                    color: white;
+                }
+                a {
+                    color: white;
+                    font-weight: bold;
+                }
+                #copyright {
+                    width: 100%;
+                    text-align: start;
+                    padding: 8px 0px 8px 30px;
+                }
+                #figs {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+                #header-img {
+                    position: absolute;
+                    left: 0px;
+                }
+                .one-input {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 5px;
+                }
+                .one-input > p {
+                    padding: 5px;
+                }
+                input {
+                    font-size: 1rem;
+                    padding: 3px;
+                }
+
+                footer > div > p {
+                    padding: 8px 0 8px 0;
+                }
+                li {
+                    margin: 16px 0 16px 0;
+                }
+                #notation > p, li > p {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+                @media (max-width : 800px) {
+                    #figs {
+                        display: flexbox;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                    }
+                    figure {
+                        display: flexbox;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        width: 85%;
+                    }
+                    figure > img {
+                        width: 60%;
+                    }
+
+                }
+                html {
+                    scroll-padding-top: 55px;
+                }
+        </style>
+
     </head>
     <body>
-        <header>
+        <header id="header">
             <img id="header-img" src="img/icon.jpg">
-            <nav>
+            <nav id="nav-bar">
                 <a class="nav-link" href="#cat-pics">Cats</a>
                 <a class="nav-link" href="#cat-video">Life with cats</a>
                 <a class="nav-link" href="#notation">Matters need attention for Adoption</a>
