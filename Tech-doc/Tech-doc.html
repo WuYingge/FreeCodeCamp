@@ -17,19 +17,17 @@
                 top: 0%;
                 width: 25%;
                 height: 100%;
-                max-width: 250px;
-                min-width: 100px;
+                min-width: min-content;
                 border-right: 2px solid black;
             }
             section {
                 border-bottom: 2px solid black;
+                width: 100%;
             }
             article {
                 display: block;
                 margin: 16px;
             }
-            
-            
             section > header {
                 font-size: 1.5rem;
                 font-weight: bold;
@@ -37,7 +35,7 @@
                 margin: 16px;
             }
             nav > header {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: bold;
                 text-transform: capitalize;
                 border-bottom: 2px solid black;
@@ -46,14 +44,14 @@
 
             code {
                 background-color: rgba(255,255,255,0.4);
-                width: inherit;
+                width: 75%;
                 display:  block;
                 margin: 16px;
                 padding: 16px;
                 border-radius: 8px;
                 font-size: 1.2rem;
                 white-space: pre-line;
-            }
+                }
             nav  article ul {
                 list-style: none;
                 padding: 0px;
@@ -62,6 +60,24 @@
                 border-bottom: 1px solid black;
                 line-height: 2rem;
                 padding: 0 0 0 8px;
+            }
+
+            @media screen and (max-width: 750px) {
+                main {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                }
+                nav {
+                    position: relative;
+                    top: 0px;
+                    right: 0px;
+                    /* height: %; */
+                    min-width: min-content;
+                    width: 100%;
+                    border-right: 2px solid black;
+                }
             }
             
         </style>
@@ -194,6 +210,89 @@
                         <code>if (true) { let y = 5; } console.log(y); 
                             // ReferenceError: y is not defined
                         </code>
+                    </p>
+                </article>
+            </section>
+            <section id="global-variables" class="main-section">
+                <header>Gloabal Variables</header>
+                <article>
+                    <p>
+                        Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.
+                    </p>
+                    <p>
+                        Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.
+                    </p>
+                </article>
+            </section>
+            <section id="Constants" class="main-section">
+                <header>Constants</header>
+                <article>
+                    <p>
+                        You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.
+                        <code>cont Pi=3.14;</code>
+                        A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.
+                    </p>
+                    <p>
+                        The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.
+                    </p>
+                    <p>
+                        You cannot declare a constant with the same name as a function or variable in the same scope. For example:
+                        <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+                            CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+                            }
+                        </code>
+                        However, object attributes are not protected, so the following statement is executed without problems.
+                        <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+                    </p>
+                </article>
+            </section>
+            <section id="data-types" class="main-section">
+                <header>Data Types</header>
+                <article>
+                    <p>
+                        The latest ECMAScript standard defines seven data types:
+                        <ul>
+                            <li>Six data types that are primitives:
+                                <ul>
+                                    <li>Boolean. true and false.</li>
+                                    <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+                                    <li>undefined. A top-level property whose value is undefined.</li>
+                                    <li>Number. 42 or 3.14159.</li>
+                                    <li>String. "Howdy"</li>
+                                    <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                                </ul>
+                            </li>
+                            <li>and Object</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.
+                    </p>
+                </article>
+            </section>
+            <section id="if-else" class="main-section">
+                <header>if...else statement</header>
+                <article>
+                    <p>
+                        Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
+                        <code>if (condition) { statement_1; } else { statement_2; }</code>
+                        condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
+                    </p>
+                    <p>
+                        You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
+                        <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+                        } else if (condition_n) { statement_n; } else { statement_last; }
+                        </code>
+                        In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
+                        <code>if (condition) { statement_1_runs_if_condition_is_true;
+                            statement_2_runs_if_condition_is_true; } else {
+                            statement_3_runs_if_condition_is_false;
+                            statement_4_runs_if_condition_is_false; }
+                        </code>
+                        It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
+                        <code>if (x = y) { /* statements here */ }</code>
+                        If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
+                        <code>if ((x = y)) { /* statements here */ }</code>
                     </p>
                 </article>
             </section>
