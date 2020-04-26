@@ -19,6 +19,7 @@
                 height: 100%;
                 min-width: min-content;
                 border-right: 2px solid black;
+                overflow-y: auto;
             }
             section {
                 border-bottom: 2px solid black;
@@ -61,6 +62,19 @@
                 line-height: 2rem;
                 padding: 0 0 0 8px;
             }
+            #top-button {
+                display: none;
+            }
+            a:link {
+                font-style: normal;
+                text-decoration-line: none;
+            }
+            a:visited {
+                color: initial;
+            }
+            a:hover {
+                text-decoration-line: underline;
+            }
 
             @media screen and (max-width: 750px) {
                 main {
@@ -73,17 +87,31 @@
                     position: relative;
                     top: 0px;
                     right: 0px;
-                    /* height: %; */
                     min-width: min-content;
                     width: 100%;
-                    border-right: 2px solid black;
+                    border-bottom: 2px solid black;
+                    border-right: none;
+
+                }
+                #top-button {
+                    display: block;
+                    height: 25px;
+                    width: 50px;
+                    border-radius: 5px;
+                    border: 1px solid black;
+                    background-color: white;
+                    position: fixed;
+                    right: 16px;
+                    bottom: 16px;
+                    text-align: center;
+                    font-style: normal;
                 }
             }
             
         </style>
     </head>
     <body>
-        <nav>
+        <nav id="nav-bar">
             <header>
                 The Introduction to JavaScript
             </header>
@@ -96,6 +124,10 @@
                     <li><a href="#variables" >Variables</a></li>
                     <li><a href="#declaring-variables" >Declaring Variables</a></li>
                     <li><a href="#variable-scope">Variable Scope</a></li>
+                    <li><a href="#global-variables">Global Variables</a></li>
+                    <li><a href="#constants">Constants</a></li>
+                    <li><a href="#data-types">Data Types</a></li>
+                    <li><a href="#if-else">if...else Statement</a></li>
                 </ul>
             </article>
         </nav>
@@ -224,7 +256,7 @@
                     </p>
                 </article>
             </section>
-            <section id="Constants" class="main-section">
+            <section id="constants" class="main-section">
                 <header>Constants</header>
                 <article>
                     <p>
@@ -296,6 +328,7 @@
                     </p>
                 </article>
             </section>
+            <div id="top-button"><a href="#nav-bar">Top</a></div>
         </main>
     </body>
 </html>
